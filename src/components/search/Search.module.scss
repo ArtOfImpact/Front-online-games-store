@@ -1,0 +1,25 @@
+.root {
+    width: 40%;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px;
+
+    input {
+        height: 50px;
+        width: 100%;
+        border: 0px solid black;
+        padding-left: 10px;
+        border-radius: 10px;
+    }
+
+    .svgClear {
+        opacity: 0.5;
+        padding-right: 10px;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
