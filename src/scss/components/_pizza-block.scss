@@ -75,4 +75,24 @@
     letter-spacing: 0.015em;
     width: 73px;
   }
+
+  &__description {
+    margin-top: 10px;
+
+    button {
+      color: #fe5f1e;
+      font-size: 18px;
+      font-weight: 600;
+      width: 100%;
+      height: 50px;
+      border-radius: 15px;
+      border: 1px solid #fe5f1e;
+      background-color: transparent;
+    }
+
+    button:hover {
+      color: white;
+      background-color: #fe5f1e;
+    }
+  }
 }

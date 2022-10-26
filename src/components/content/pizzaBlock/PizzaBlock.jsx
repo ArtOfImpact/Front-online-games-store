@@ -1,5 +1,6 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { NavLink } from "react-router-dom"
 import { addCart } from "../../../redux/slices/cartSlices"
 import { selectCartItemById } from '../../../redux/slices/cartSlices'
 
@@ -10,14 +11,7 @@ let PizzaBlock = ({ imageUrl, types, sizes, price, title, id }) => {
 
     const [count, setCount] = React.useState(0)
 
-    const [size, setSize] = React.useState(0)
-
-    const [typeActive, setTypeActive] = React.useState(0)
-
-    const type = ['Тонкая', 'Традиционая']
-
     const addCount = cartItems ? cartItems.count : 0
-
 
     const onClickAdd = () => {
         const items = {
@@ -45,8 +39,11 @@ let PizzaBlock = ({ imageUrl, types, sizes, price, title, id }) => {
                                 fill="white" />
                         </svg>
                         <span >Добавить</span>
-                        {addCount > 0 && <i>{count}</i>}
+                        {addCount > 0 && <i>{addCount}</i>}
                     </div>
+                </div>
+                <div className="pizza-block__description">
+                    <NavLink to={`/description/${id}`}><button>Подробнее</button></NavLink>
                 </div>
             </div>
         </div>

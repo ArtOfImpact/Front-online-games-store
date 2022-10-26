@@ -65,8 +65,7 @@ let Content = () => {
                     </div>
                     :
                     <div className='content__error'>
-                        <span>К сожалению такой игры нет ... </span>
-                        <img src={icon} alt="smile" />
+                        <div class="loader">loading</div>
                     </div>
                 }
                 <Pagination />
